@@ -1,9 +1,10 @@
 import React,{useContext} from 'react';
 import { CartValue} from '../Contexts/ProductContext';
 
-const Item = () => {
-	const {removeItem,title,image,price,id} = useContext(CartValue)
-
+const Item = (props) => {
+	const {removeItem} = useContext(CartValue)
+	const {item} = props;
+	const {image,title,price,id} = item
 	{console.log(removeItem,"hey bipolarbear this is removeItem")}
 	return (
 		<div className="shopping-cart_item">
