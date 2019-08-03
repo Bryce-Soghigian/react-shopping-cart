@@ -29,12 +29,14 @@ function App() {
       This removes the need to go through each part of your app and pass props deeper. 
       Context Allows a state that can be called only when it is needed.
       */}
+     <ProductContext.Provider value={{ products, addItem }}>
       <CartValue.Provider value={{cart, removeItem}}>
         <Navigation />
         <Route path="/cart" component={ShoppingCart} />
-      </CartValue.Provider>
-      <ProductContext.Provider value={{ products, addItem }}>
+     
         <Route exact path="/" component={Products} />
+        </CartValue.Provider>
+     
       </ProductContext.Provider>
     </div>
   );

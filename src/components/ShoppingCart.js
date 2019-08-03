@@ -18,7 +18,7 @@ const ShoppingCart = () => {
 			{context.cart.map(item => (
 				<Item 
 				remove = {context.removeItem} 
-				key={item.id} {...item} />
+				key={item.id} item={item} />
 			))}
 
 			<div className="shopping-cart__checkout">
